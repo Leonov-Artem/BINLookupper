@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.graphics.Color" />
+
+        <variable
+            name="cardMetaData"
+            type="com.cft.data.model.CardMetaData" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/text_label_scheme"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/schemeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.scheme != null ? cardMetaData.scheme : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_label_brand"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/schemeTextView" />
+
+            <TextView
+                android:id="@+id/brandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.brand != null ? cardMetaData.brand : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_label_card_number"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/brandTextView" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/text_label_length"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/curdNumberLengthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.number.length != null ? String.valueOf(cardMetaData.number.length) : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/text_label_luhn"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/cardNumberLuhnTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.number.luhn != null ? cardMetaData.number.luhn : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/cardTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.type != null ? cardMetaData.type : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_label_prepaid"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/cardTypeTextView" />
+
+            <TextView
+                android:id="@+id/prepaidTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.prepaid != null ? cardMetaData.prepaid : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_label_country"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/prepaidTextView" />
+
+            <TextView
+                android:id="@+id/countryNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.country.name != null ? cardMetaData.country.name : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/text_label_type"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/latitudeLableTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="@{cardMetaData.country.latitude != null ? true : false}"
+                android:text="@string/text_label_latitude"
+                android:textColor="@{cardMetaData.country.latitude != null ? @color/teal_200 : Color.BLACK}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/countryNameTextView" />
+
+            <TextView
+                android:id="@+id/latitudeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:clickable="@{cardMetaData.country.latitude != null ? true : false}"
+                android:text="@{cardMetaData.country.latitude != null ? String.valueOf(cardMetaData.country.latitude) : @string/placeholder_no_data}"
+                android:textColor="@{cardMetaData.country.latitude != null ? @color/teal_200 : Color.BLACK}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/latitudeLableTextView"
+                app:layout_constraintTop_toTopOf="@+id/latitudeLableTextView"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/longitudeLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="@{cardMetaData.country.longitude != null ? true : false}"
+                android:text="@string/text_label_longitude"
+                android:textColor="@{cardMetaData.country.longitude != null ? @color/teal_200 : Color.BLACK}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/latitudeTextView"
+                app:layout_constraintTop_toTopOf="@+id/latitudeLableTextView" />
+
+            <TextView
+                android:id="@+id/longitudeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:clickable="@{cardMetaData.country.longitude != null ? true : false}"
+                android:text="@{cardMetaData.country.longitude != null ? String.valueOf(cardMetaData.country.longitude) : @string/placeholder_no_data}"
+                android:textColor="@{cardMetaData.country.longitude != null ? @color/teal_200 : Color.BLACK}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/longitudeLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/longitudeLabelTextView"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/closing_bracket"
+                android:textColor="@{cardMetaData.country.longitude != null ? @color/teal_200 : Color.BLACK}"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/longitudeTextView"
+                app:layout_constraintTop_toTopOf="@+id/latitudeLableTextView" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_label_bank"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/curdNumberLengthTextView" />
+
+            <TextView
+                android:id="@+id/bankNameAndCityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{cardMetaData.bank.name != null ? cardMetaData.bank.name : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView25"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/bankUrlTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="web"
+                android:text="@{cardMetaData.bank.url != null ? cardMetaData.bank.url : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/bankNameAndCityTextView"
+                tools:text="@string/placeholder_no_data" />
+
+            <TextView
+                android:id="@+id/bankPhoneNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoLink="phone"
+                android:text="@{cardMetaData.bank.phone != null ? cardMetaData.bank.phone : @string/placeholder_no_data}"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/bankUrlTextView"
+                tools:text="@string/placeholder_no_data" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

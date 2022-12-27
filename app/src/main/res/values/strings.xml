@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BIN Lookuper</string>
+    <string name="placeholder_no_data">\?</string>
+    <string name="closing_bracket">)</string>
+
+    <string name="action_bar_title_search_history">Search History</string>
+
+    <string name="dialog_button_ok">OK</string>
+    <string name="dialog_button_yes">Yes</string>
+    <string name="dialog_button_no">No</string>
+
+    <string name="dialog_message_speed_limit_exceeded">Requests are throttled at 10 per minute with a burst allowance of 10</string>
+    <string name="dialog_message_delete_search_history">Delete all search history?</string>
+    <string name="dialog_message_delete_search_history_item">Delete from search history?</string>
+
+    <string name="text_label_bin">BIN:</string>
+    <string name="text_label_scheme">SCHEME / NETWORK</string>
+    <string name="text_label_brand">BRAND</string>
+    <string name="text_label_card_number">CARD NUMBER</string>
+    <string name="text_label_length">LENGTH</string>
+    <string name="text_label_luhn">LUHN</string>
+    <string name="text_label_prepaid">PREPAID</string>
+    <string name="text_label_country">COUNTRY</string>
+    <string name="text_label_type">TYPE</string>
+    <string name="text_label_latitude">(latitude:</string>
+    <string name="text_label_longitude">, longitude:</string>
+    <string name="text_label_bank">BANK</string>
+
+    <string name="menu_item_title_search_history">Search History</string>
+    <string name="menu_item_title_clear_history">Clear history</string>
+    <string name="menu_item_title_delete_from_search_history">Delete</string>
+</resources>
