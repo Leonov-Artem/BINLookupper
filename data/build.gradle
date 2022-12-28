@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.cft.data'
+    namespace 'com.cft.binlookupper'
     compileSdk 33
 
     defaultConfig {

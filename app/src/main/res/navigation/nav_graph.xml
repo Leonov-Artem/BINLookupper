@@ -6,7 +6,7 @@
     app:startDestination="@id/binLookupFragment">
     <fragment
         android:id="@+id/binLookupFragment"
-        android:name="com.cft.binlookuper.presentation.home.BinLookupFragment"
+        android:name="com.cft.binlookupper.presentation.home.BinLookupFragment"
         android:label="BinLookupFragment">
         <action
             android:id="@+id/action_binLookupFragment_to_searchHistoryFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchHistoryFragment"
-        android:name="com.cft.binlookuper.presentation.history.list.SearchHistoryFragment"
+        android:name="com.cft.binlookupper.presentation.history.list.SearchHistoryFragment"
         android:label="fragment_search_history"
         tools:layout="@layout/fragment_search_history">
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchHistoryDetailsFragment"
-        android:name="com.cft.binlookuper.presentation.history.details.SearchHistoryDetailsFragment"
+        android:name="com.cft.binlookupper.presentation.history.details.SearchHistoryDetailsFragment"
         android:label="fragment_search_history_details"
         tools:layout="@layout/fragment_search_history_details">
         <argument

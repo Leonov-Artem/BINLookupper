@@ -9,7 +9,7 @@
 
         <variable
             name="cardMetaData"
-            type="com.cft.data.model.CardMetaData" />
+            type="com.cft.binlookupper.data.model.CardMetaData" />
     </data>
 
     <ScrollView

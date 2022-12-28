@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">BIN Lookuper</string>
+    <string name="app_name">BIN Lookupper</string>
     <string name="placeholder_no_data">\?</string>
     <string name="closing_bracket">)</string>
+    <string name="search_view_hint">Please enter BIN</string>
 
     <string name="action_bar_title_search_history">Search History</string>
 

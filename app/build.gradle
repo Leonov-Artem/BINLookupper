@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.cft.binlookuper'
+    namespace 'com.cft.binlookupper'
     compileSdk 33
 
     buildFeatures {
@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.cft.binlookuper"
+        applicationId "com.cft.binlookupper"
         minSdk 23
         targetSdk 33
         versionCode 1
