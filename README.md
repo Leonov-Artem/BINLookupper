@@ -1,4 +1,4 @@
-# BINLookuper
+# BINLookupper
 Реализовано Android-приложение, в котором:
 1. Пользователь вводит [BIN](https://www.banki.ru/wikibank/bankovskiy_identifikatsionnyiy_nomer/) банковской карты и видит всю доступную информацию о нём, загруженную с [BINLIST.NET](https://binlist.net/)
 2. История предыдущих запросов выводится списком
